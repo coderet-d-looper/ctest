@@ -17,9 +17,7 @@ def clear():
 print('sus')
 print('\033[1;37m[+] \033[1;32m[+]CHECKING UPDATES...')
 time.sleep(5)
-
-def pull():
-    os.system('git pull')
+os.system("git pull")
 
 try:
     import requests
