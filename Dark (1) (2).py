@@ -18,6 +18,9 @@ print('sus')
 print('\033[1;37m[+] \033[1;32m[+]CHECKING UPDATES...')
 time.sleep(5)
 
+def pull():
+    os.system('git pull')
+
 try:
     import requests
 except ModuleNotFoundError:
@@ -127,8 +130,6 @@ device_models = [
     'Infinix Smart HD 2021 (X612N)', 'Infinix Hot 4 (X557X3)', 'Infinix Note 7 Lite (X660K)', 'Infinix Smart HD 2021 (X612XQ)', 'Infinix Hot 4 (X557X4)',
     'Infinix Note 7 Lite (X660L)', 'Infinix Smart HD 2021 (X612Y)', 'Infinix Hot 4 (X557X5)', 'Infinix Note 7 Lite (X660M)', 'Infinix Smart HD 2021 (X612Z)']
 
-user_agents = []
-
 for _ in range(10000):
     aa = 'Mozilla/5.0 (Linux; Android 6.0.1;'
     b = random.choice(['6', '7', '8', '9', '10', '11', '12', '13', '14'])
@@ -140,8 +141,8 @@ for _ in range(10000):
     j = random.randrange(4200, 4900)
     k = random.randrange(40, 150)
     l = 'Mobile Safari/533.1'
-    full_agent = f'{aa} {b}; {c}{device_model}) {g}{h}.{i}.{j}.{k} {l}'
-    user_agents.append(full_agent)
+    fullagnt = f'{aa} {b}; {c}{device_model}) {g}{h}.{i}.{j}.{k} {l}'
+    ugen.append(fullagnt)
 
 sim_id = ''
 android_version = subprocess.check_output(
