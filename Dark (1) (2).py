@@ -17,7 +17,6 @@ def clear():
 print('sus')
 print('\033[1;37m[+] \033[1;32m[+]CHECKING UPDATES...')
 time.sleep(5)
-os.system("git pull")
 
 try:
     import requests
@@ -95,8 +94,7 @@ device_models = [
     'Samsung Galaxy M42 5G', 'Samsung Galaxy M12 5G', 'Samsung Galaxy Z Fold 3 5G',
     'Samsung Galaxy Z Flip 3 5G', 'Samsung Galaxy S21 5G', 'Samsung Galaxy S21 Plus 5G',
     'Samsung Galaxy S20 FE 5G', 'Samsung Galaxy Note 20 5G', 'Samsung Galaxy Note 10 Lite 5G',
-    'Samsung Galaxy A71 5G', 'Samsung Galaxy A51 5G', 'Samsung Galaxy A31 5G', 'Samsung Galaxy A11 5G', 'Infinix Zero 8', 'Infinix Note 10 Pro', 'Infinix Hot 10', 'Infinix S5', 'Infinix Smart 5',
-    'Infinix Hot 9', 'Infinix Note 8', 'Infinix S4', 'Infinix Smart 4', 'Infinix Hot 8',
+    'Samsung Galaxy A71 5G', 'Samsung Galaxy A51 5G', 'Samsung Galaxy A31 5G', 'Samsung Galaxy A11 5G', 'Infinix Zero 8', 'Infinix Note 10 Pro', 'Infinix Hot 10', 'Infinix S5', 'Infinix Smart 5', 'Infinix Hot 9', 'Infinix Note 8', 'Infinix S4', 'Infinix Smart 4', 'Infinix Hot 8',
     'Infinix Note 7', 'Infinix S3', 'Infinix Smart 3', 'Infinix Hot 7', 'Infinix Note 6',
     'Infinix S2', 'Infinix Smart 2', 'Infinix Hot 6', 'Infinix Note 5', 'Infinix S1',
     'Infinix Smart', 'Infinix Hot 5', 'Infinix Note 4', 'Infinix S5 Pro', 'Infinix Smart 4 Plus',
@@ -126,7 +124,9 @@ device_models = [
     'Infinix Note 7 Lite (X660F)', 'Infinix Smart HD 2021 (X612FQ)', 'Infinix Hot 4 (X557X)', 'Infinix Note 7 Lite (X660G)', 'Infinix Smart HD 2021 (X612H)',
     'Infinix Hot 4 (X557X1)', 'Infinix Note 7 Lite (X660H)', 'Infinix Smart HD 2021 (X612LQ)', 'Infinix Hot 4 (X557X2)', 'Infinix Note 7 Lite (X660J)',
     'Infinix Smart HD 2021 (X612N)', 'Infinix Hot 4 (X557X3)', 'Infinix Note 7 Lite (X660K)', 'Infinix Smart HD 2021 (X612XQ)', 'Infinix Hot 4 (X557X4)',
-    'Infinix Note 7 Lite (X660L)', 'Infinix Smart HD 2021 (X612Y)', 'Infinix Hot 4 (X557X5)', 'Infinix Note 7 Lite (X660M)', 'Infinix Smart HD 2021 (X612Z)']
+    'Infinix Note 7 Lite (X660L)', 'Infinix Smart HD 2021 (X612Y)', 'Infinix Hot 4 (X557X5)', 'Infinix Note 7 Lite (X660M)', 'Infinix Smart HD 2021 (X612Z)', ]
+
+user_agents = []
 
 for _ in range(10000):
     aa = 'Mozilla/5.0 (Linux; Android 6.0.1;'
@@ -139,8 +139,8 @@ for _ in range(10000):
     j = random.randrange(4200, 4900)
     k = random.randrange(40, 150)
     l = 'Mobile Safari/533.1'
-    fullagnt = f'{aa} {b}; {c}{device_model}) {g}{h}.{i}.{j}.{k} {l}'
-    ugen.append(fullagnt)
+    full_agent = f'{aa} {b}; {c}{device_model}) {g}{h}.{i}.{j}.{k} {l}'
+    user_agents.append(full_agent)
 
 sim_id = ''
 android_version = subprocess.check_output(
@@ -200,28 +200,29 @@ device = {
     'fbsv': fbsv,
     'fbca': fbca,
     'fbdm': fbdm}
-logo = ("""\033[1;32m              
-██████╗░░█████╗░██████╗░██╗░░██╗  ███████╗
-██╔══██╗██╔══██╗██╔══██╗██║░██╔╝  ╚════██║
-██║░░██║███████║██████╔╝█████═╝░  ░░███╔═╝
-██║░░██║██╔══██║██╔══██╗██╔═██╗░  ██╔══╝░░
-██████╔╝██║░░██║██║░░██║██║░╚██╗  ███████╗
-╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝  ╚══════╝
-\033[1;33m----------------------------------------------
- \033[1;37m[👨] Author    :  Dark X FUZED
- \033[1;37m[📖] Github    :  https://github.com/coderet-d-looper
- \033[1;37m[☎️] Whatsapp   :  +8801576593082
- \033[1;37m[💉] Tool      :  ONLY-GREEN [PRO]
- \033[1;37m[📅] Version   :  BETA TESTING
- \033[1;37m[🚀] Status    :  Trial
- \033[1;37m[⏳] Update    :  Daily at 12:00AM
- \033[1;33m----------------------------------------------
- \033[1;31m[😀]WORKING ONLY ON MOBILE DATA[✅]
-\033[1;33m----------------------------------------------""")
+logo = ("""
 
+██████╗░░█████╗░██████╗░██╗░░██╗        ███████╗
+██╔══██╗██╔══██╗██╔══██╗██║░██╔╝        ╚════██║
+██║░░██║███████║██████╔╝█████═╝░        ░░███╔═╝
+██║░░██║██╔══██║██╔══██╗██╔═██╗░        ██╔══╝░░
+██████╔╝██║░░██║██║░░██║██║░╚██╗        ███████╗
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝        ╚══════╝
 
-def linex():
-    print('\033[1;37m----------------------------------------------')
+\033[1;91m\033[1;41m\033[1;97m              Be you, The world will adjust               \033[;0m\033[1;91m\033[1;92m
+
+\033[1;92m══════════════════════════════════════════
+\033[1;32m[👨] AUTHOR    :\033[1;32m DARK X FUZED 
+\033[1;32m[📖] GITHUB    :\033[1;32m CODERET-D-LOOPER
+\033[1;32m[😇] FACEBOOK  :\033[1;32m FIRDAWS SAPNO
+\033[1;32m[💉] TOOLS TYPE:\033[1;32m FREE
+\033[1;32m[📅] VERSION   :\033[1;32m 2.0
+\033[1;32m[🚀] STATUS    :\033[1;32m WORKING
+\033[1;32m[⏳] UPDATE    :\033[1;32m AUTO-UPDATE [ON]
+\033[1;92m══════════════════════════════════════════
+
+\033[1;91m<═══\033[1;41m\033[1;97m WORKING ONLY ON MOBILE DATA\033[;0m\033[1;91m═══>\033[1;92m""")
+
 
 
 def clear():
@@ -244,32 +245,35 @@ def menu():
         os.system(' xdg-open https://www.github.com/coderet-d-looper')
         if 1 == 1:
             clear()
-            print('\033[1;37m[1️⃣] File cloning\n\033[1;37m[2️⃣] Random Cloning\n\033[1;37m[3️⃣] VISIT MY ACCOUNT\n\033[1;37m[4️⃣] Close Tool')
-            linex()
-            xd = input('\033[1;37m[?] Choice : ')
+            print(
+            "\033[38;5;46m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;32m•\033[1;35m•\033[1;34m•\033[1;97m•\033[1;33m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[38;5;196m•\033[1;32m•\033[1;97m•\033[1;35m•\033[1;34m•\033[1;33m•\033[38;5;46m•\033[1;97m•")
+            print('\033[1;37m[1️⃣] FILE CLONING\n\033[1;37m[2️⃣] RANDOM CLONING [NOT WORKING]\n\033[1;37m[3️⃣] VISIT MY ACCOUNT\n\033[1;37m[4️⃣] CLOSE TOOL')
+            print(
+            "\033[38;5;46m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;32m•\033[1;35m•\033[1;34m•\033[1;97m•\033[1;33m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[38;5;196m•\033[1;32m•\033[1;97m•\033[1;35m•\033[1;34m•\033[1;33m•\033[38;5;46m•\033[1;97m•")
+            xd = input('\033[1;37m[💥] CHOOSE : ')
             if xd in ['1', '01']:
                 os.system(
                     ' xdg-open https://m.facebook.com/groups/2477016825771219/?ref=share&mibextid=NSMWBT')
                 clear()
-                file = input('\033[1;37m[📂] Enter File Path: ')
+                file = input('\033[1;37m[📂] ENTER FILE PATH: ')
                 try:
                     fo = open(file, 'r').read().splitlines()
                 except FileNotFoundError:
-                    print('[❌] File location not found [❌]')
+                    print('[❌] FILE LOCATION NOT FOUND [❌]')
                     time.sleep(1)
                     menu()
                 clear()
-                print('\033[1;32m[1] Method 1 [Best Working]\n[2] Method 2')
+                print('\033[1;32m[1] METHOD 1 [BEST WORKING]\n[2] METHOD 2')
                 linex()
-                mthd = input('\033[1;32m[?] Choose : ')
+                mthd = input('\033[1;32m[+] CHOOSE : ')
                 linex()
                 plist = []
-                print('\033[1;37m           Select Password Crack menu')
+                print('\033[1;37m           SELECT CRACK MENU')
                 linex()
                 print(
-                    '[1] Crack with auto password [Best Working]\n[2] Crack with choice password')
+                    '[1] AUTO PASSWORD [BEST]\n[2] MANUAL PASSWORD')
                 linex()
-                ppp = input('\033[1;32m[?] Choose : ')
+                ppp = input('\033[1;32m[+] CHOOSE : ')
                 if ppp in ['1', '01']:
                     plist.append('first last')
                     plist.append('first')
@@ -291,19 +295,19 @@ def menu():
                     try:
                         linex()
                         ps_limit = int(
-                            input(' How many passwords do you want to add ? '))
+                            input(' HOW MANY PASSWORD DO YOU WANT TO ADD ? '))
                     except:
                         ps_limit = 15
                     linex()
-                    print('\033[1;32m example: first last,firtslast,first123')
+                    print('\033[1;32m EXAMPLE: first last,firtslast,first123')
                     linex()
                     for i in range(ps_limit):
                         plist.append(
-                            input(f'\033[1;32m[+] Put password {i+1}: '))
+                            input(f'\033[1;32m[+] PUT PASSWORD {i+1}: '))
                 linex()
-                print('[🍬]Do you went show cp account? (Y/n): ')
+                print('[🍬]SHOW CP ACCOUNT? (Y/n): ')
                 linex()
-                cx = input(' Choose: ')
+                cx = input(' CHOOSE: ')
                 if cx in ['y', 'Y', 'yes', 'Yes', '1']:
                     pcp.append('y')
                 else:
@@ -311,11 +315,11 @@ def menu():
                 with tred(max_workers=30) as crack_submit:
                     clear()
                     total_ids = str(len(fo))
-                    print('[🧮]Total ids : \033[1;32m'+total_ids)
-                    print("\033[1;35m[🚄]Cracking speed - MEDIUM ")
-                    print("\033[1;33m[🔍]Cracking has been started")
+                    print('[🧮]TOTAL ID : \033[1;32m'+total_ids)
+                    print("\033[1;35m[🚄]CRACKING SPEED - MEDIUM ")
+                    print("\033[1;33m[🔍]CRACKING HAS BEEN STARTED")
                     linex()
-                    print(f'\033[1;31m[✈️]USE FLIGHT MODE IN EVERY 5 MIN')
+                    print("""\033[1;91m\033[1;41m\033[1;97m ✈ USE FLIGHT MODE IN EVERY 5 MIN\033[;0m\033[1;91m\033[1;92m""")
                     linex()
                     for user in fo:
                         ids, names = user.split('|')
@@ -328,11 +332,11 @@ def menu():
                             crack_submit.submit(api1, ids, names, passlist)
                 print('\033[1;37m')
                 linex()
-                print('[😘]The process has completed')
+                print('[😘]CRACKING HAS COMPLETED')
                 print('[🔰]Total OK/CP/2F: '+str(len(oks)) +
                       '/'+str(len(cps))+'/'+str(len(twf)))
                 linex()
-                input('[👉]Press enter to back[👈]')
+                input('[👉]PRESS ENTER FOR MAIN MENU[👈]')
                 os.system('python Dark.py')
             elif xd in ['3', '03']:
                 os.system(' xdg-open https://www.facebook.com/coderet.d.looper')
