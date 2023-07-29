@@ -15,6 +15,7 @@ try:
 except ModuleNotFoundError:
     os.system('pip install mechanize requests futures bs4==2 > /dev/null')
     os.system('pip install bs4')
+    os.system('pkg install espeak')
 
 try:
     proxy = requests.get(
